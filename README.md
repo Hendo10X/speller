@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Spellz - AI-Powered Personalized Spell Checker
 
-## Getting Started
+Spellz is a modern, AI-powered spell checker that learns from your texting style and incorporates urban slang. It uses Google's Gemini AI to provide contextually appropriate suggestions while maintaining your unique communication style.
 
-First, run the development server:
+## 🌟 Features
 
+- **Personalized Suggestions**: Learns from your texting style and adapts to your communication patterns
+- **Multi-language Support**: Currently supports English, Spanish, French, German, Italian, and Portuguese
+- **Tone Customization**: Choose from various tones including:
+  - Casual
+  - Flirty
+  - Friendly
+  - Professional
+  - Urban
+  - Sarcastic (English)
+  - Passionate (Spanish/French)
+  - Elegant (French)
+  - Formal (German)
+  - Direct (German)
+  - Humorous (German)
+  - Expressive (Italian)
+  - Warm (Portuguese)
+  - Playful (Portuguese)
+
+- **Modern UI**: Built with Next.js and styled using Tailwind CSS
+- **Secure Authentication**: Google Sign-in integration via Supabase
+- **Responsive Design**: Works seamlessly across all devices
+- **Custom Fonts**: Uses Instrument Serif for headings and Inter for body text
+
+## 🚀 Tech Stack
+
+- **Frontend Framework**: Next.js 15.3.3
+- **UI Components**: Custom components built with Radix UI
+- **Styling**: Tailwind CSS with custom configuration
+- **Authentication**: Supabase Auth
+- **AI Integration**: Google Gemini AI
+- **Animation**: Framer Motion
+- **Icons**: Lucide React
+- **Type Safety**: TypeScript
+
+## 📦 Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/spellz.git
+cd spellz
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables:
+Create a `.env.local` file in the root directory with the following variables:
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+NEXT_PUBLIC_GOOGLE_AI_API_KEY=your_google_ai_api_key
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+## 🛠️ Development
 
-To learn more about Next.js, take a look at the following resources:
+### Project Structure
+```
+spellz/
+├── src/
+│   ├── app/                 # Next.js app directory
+│   ├── components/         # React components
+│   │   ├── ui/            # UI components
+│   │   └── ...            # Feature components
+│   ├── lib/               # Utility functions
+│   └── styles/            # Global styles
+├── public/                # Static assets
+└── ...                   # Configuration files
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Available Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `npm run dev`: Start development server
+- `npm run build`: Build for production
+- `npm run start`: Start production server
+- `npm run lint`: Run ESLint
 
-## Deploy on Vercel
+## 🔒 Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Variable | Description |
+|----------|-------------|
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anonymous key |
+| `NEXT_PUBLIC_GOOGLE_AI_API_KEY` | Google Gemini AI API key |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 UI Components
+
+The project uses a custom UI component library built with Radix UI primitives and styled with Tailwind CSS. Key components include:
+
+- **Card**: Container component with border and rounded corners
+- **Button**: Various button styles (default, destructive, outline, secondary, ghost, link)
+- **Textarea**: Custom styled text input
+- **Select**: Dropdown component with custom styling
+- **Tabs**: Tabbed interface component
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [Next.js](https://nextjs.org/)
+- [Supabase](https://supabase.com/)
+- [Google Gemini AI](https://ai.google.dev/)
+- [Radix UI](https://www.radix-ui.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+
+## 📞 Support
+
+For support, please open an issue in the GitHub repository or contact the maintainers.
+
+---
+
+Built with ❤️ using modern web technologies
