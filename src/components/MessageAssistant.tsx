@@ -43,7 +43,7 @@ export function MessageAssistant() {
 
   const handleLanguageChange = (newLanguage: Language) => {
     setLanguage(newLanguage);
-    setTone(languageTones[newLanguage][0]); // Reset tone to first option of new language
+    setTone(languageTones[newLanguage][0]);
   };
 
   const generateSuggestions = async () => {
@@ -114,23 +114,23 @@ export function MessageAssistant() {
 
   return (
     <div className="max-w-2xl mx-auto p-4 space-y-6">
-      <Card className="p-6">
-        <h2 className="text-2xl font-bold mb-4">Message Assistant</h2>
+      <Card className="p-6 border">
+        <h2 className="text-2xl font-bold mb-4 font-instrument-serif">Message Assistant</h2>
         
         <div className="space-y-4">
           <Textarea
             placeholder="Enter the message you want to respond to..."
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="min-h-[100px]"
+            className="min-h-[100px] font-inter"
           />
           
           <div className="flex flex-wrap gap-4">
             <Select value={language} onValueChange={(value: string) => handleLanguageChange(value as Language)}>
-              <SelectTrigger className="w-[180px]">
+              <SelectTrigger className="w-[180px] font-inter">
                 <SelectValue placeholder="Select language" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="shadow-none">
                 <SelectItem value="english">English</SelectItem>
                 <SelectItem value="spanish">Spanish</SelectItem>
                 <SelectItem value="french">French</SelectItem>
@@ -141,10 +141,10 @@ export function MessageAssistant() {
             </Select>
 
             <Select value={tone} onValueChange={(value: string) => setTone(value)}>
-              <SelectTrigger className="w-[180px]">
+              <SelectTrigger className="w-[180px] font-inter">
                 <SelectValue placeholder="Select tone" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="shadow-none">
                 {languageTones[language].map((t) => (
                   <SelectItem key={t} value={t}>
                     {t.charAt(0).toUpperCase() + t.slice(1)}
@@ -156,13 +156,14 @@ export function MessageAssistant() {
             <Button 
               onClick={generateSuggestions}
               disabled={loading || !message}
+              className="font-inter"
             >
               {loading ? 'Generating...' : 'Get Suggestions'}
             </Button>
           </div>
 
           {error && (
-            <div className="p-3 bg-destructive/10 text-destructive rounded-md text-sm">
+            <div className="p-3 bg-destructive/10 text-destructive rounded-md text-sm font-inter">
               {error}
             </div>
           )}
@@ -182,14 +183,14 @@ export function MessageAssistant() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="p-4">
+              <Card className="p-4 border">
                 <div className="space-y-2">
-                  <p className="text-lg font-medium">{suggestion.response}</p>
-                  <p className="text-sm text-muted-foreground">{suggestion.explanation}</p>
+                  <p className="text-lg font-medium font-instrument-serif">{suggestion.response}</p>
+                  <p className="text-sm text-muted-foreground font-inter">{suggestion.explanation}</p>
                   {suggestion.slang.length > 0 && (
                     <div className="flex flex-wrap gap-2 mt-2">
                       {suggestion.slang.map((term, i) => (
-                        <span key={i} className="px-2 py-1 bg-secondary text-secondary-foreground rounded-md text-sm">
+                        <span key={i} className="px-2 py-1 bg-secondary text-secondary-foreground rounded-md text-sm font-inter">
                           {term}
                         </span>
                       ))}

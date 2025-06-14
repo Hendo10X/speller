@@ -24,12 +24,12 @@ export default function SignIn() {
     <div className="flex min-h-screen items-center justify-center">
       <div className="w-full max-w-md space-y-8 p-8">
         <div className="text-center">
-          <h1 className="text-2xl font-bold">Welcome to Speller</h1>
-          <p className="mt-2 text-gray-600">Sign in to continue</p>
+          <h1 className="text-2xl font-bold font-instrument-serif">Welcome to Speller</h1>
+          <p className="mt-2 text-gray-600 font-inter">Sign in to continue</p>
         </div>
         <Button
           onClick={handleGoogleSignIn}
-          className="w-full"
+          className="w-full font-inter"
           variant="outline"
         >
           <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24">
@@ -50,7 +50,7 @@ export default function SignIn() {
               fill="#EA4335"
             />
           </svg>
-          Sign in with Google
+          <span className="font-inter">Sign in with Google</span>
         </Button>
       </div>
     </div>
