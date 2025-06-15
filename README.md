@@ -1,6 +1,6 @@
-# Spellz - AI-Powered Personalized Spell Checker
+# Speller - AI-Powered Personalized Spell Checker
 
-Spellz is a modern, AI-powered spell checker that learns from your texting style and incorporates urban slang. It uses Google's Gemini AI to provide contextually appropriate suggestions while maintaining your unique communication style.
+Speller is a modern, AI-powered spell checker that learns from your texting style and incorporates urban slang. It uses Google's Gemini AI to provide contextually appropriate suggestions while maintaining your unique communication style.
 
 ## 🌟 Features
 
